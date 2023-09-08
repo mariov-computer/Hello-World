@@ -26,3 +26,16 @@ public:
         }
     }
 };
+
+/* My general thought process: 
+1.)initialize three pointers: 'i' pointing to the last element of nums1 (before the zeros), 
+'j' pointing to the last element of nums2, and 'k' pointing to the last element of the merged array (nums1).
+    
+2.) I start from the end of both arrays and compare the elements at nums1[i] and nums2[j]. 
+I then put the larger element at nums1[k] and decrement both i and k, or j and k, accordingly.
+    
+3.) I must continue this process until either i or j becomes less than 0.
+    
+4.) If there are remaining elements observed in nums2, like if j is greater than or equal to 0, then the code will copy them to the beginning 
+of nums1. Ultimately, the algorithm merges the 2 arrays in-place and in non-decreasing order as required
+*/
